@@ -1,10 +1,11 @@
-.banner {
+.banner-home {
   color: white;
   text-align: center;
   height: 100vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  display: flex;
+  position:relative;
+    display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -46,7 +47,6 @@
   top: 10px;
   left: 10px;
   font-size: 20px;
-  text-transform: uppercase;
 }
 .card-description {
   position: absolute;
@@ -75,4 +75,38 @@
 }
 .location {
   font-size: 10px;
+}
+.content-card {
+  position:absolute;
+  top:200px;
+  left: 200px;
+  height:300px;
+  width:600px;
+  background-color: rgba(0,0,0,0.5);
+  z-index:1;
+}
+
+.content {
+    p{
+    font-size:20px;
+    font-weight: 900;
+    opacity:1;
+    z-index:2;
+  }
+}
+
+.scout-button {
+  position: absolute;
+  bottom:220px;
+  left: 420px;
+}
+
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  position:relative;
+
 }
