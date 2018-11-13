@@ -50,14 +50,14 @@
 }
 .card-description {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 5px;
+  left: 5px;
 }
 .card-description h2 {
-  font-size: 24px;
+  font-size: 20px;
 }
 .card-description p {
-  font-size: 20px;
+  font-size: 15px;
 
 }
 .card-link {
@@ -72,4 +72,7 @@
 }
 .card-link:hover {
   opacity: 0.1;
+}
+.location {
+  font-size: 10px;
 }

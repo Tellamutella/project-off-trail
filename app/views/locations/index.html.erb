@@ -6,7 +6,7 @@
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
   <div class="card-category"><%=location.name%></div>
   <div class="card-description">
-    <h2><%= location.user.first_name %></h2>
+    <p><%= location.user.first_name %></p>
     <p><%= location.coordinates %></p>
     <p>$<%= location.price %></p>
   </div>
@@ -19,8 +19,8 @@
     </div>
 </div>
 
-<% if current_user.is_scout %>
-<% if policy(Location).create? %>
- <%= link_to “New location”, new_location_path %>
-<% end %>
-<% end %>
+<%#  if current_user.is_scout %>
+<%# if policy(Location).create? %>
+ <%#= link_to “New location”, new_location_path %>
+<%# end %>
+<%# end %>
