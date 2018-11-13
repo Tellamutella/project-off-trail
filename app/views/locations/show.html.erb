@@ -1,2 +1,29 @@
-<h1>Locations#show</h1>
-<p>Find me in app/views/locations/show.html.erb</p>
+<div>
+  <div>
+    <h3><%= @location.name %></h3>
+    <p>Scout:
+      <%= @location.user.first_name %>
+      <%= @location.user.last_name %>
+    </p>
+    <%= cl_image_tag @location.photo, height: 300, width: 400, crop: :fill %>
+    <%= @location.description %>
+    <p>Price to Book:
+      <%= @location.price %>
+    </p>
+    <% @location.reviews do |review| %>
+    <p id=#review-bold> Rated:
+      <%= review.rating %>
+    </p>
+    <p>
+      <%= review.content %>
+    </p>
+    <% end %>
+  </div>
+</div>
+
+<% @locations.each do |location| %>
+<% if current_user.is_scout %>
+ <% if policy(location).edit? %>
+   <%= link_to “Update”, edit_location_path(location) %>
+ <% end %>
+<% end %>
