@@ -25,4 +25,9 @@ class LocationPolicy < ApplicationPolicy
   def destroy
     @user.is_scout && @record.user == @user
   end
+
+  def index
+    true
+  end
+
 end
