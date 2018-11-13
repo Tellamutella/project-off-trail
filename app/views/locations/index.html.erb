@@ -1,26 +1,32 @@
-
-<div class="container">
-  <div class="row">
-    <%@locations.first(10).each do |location| %>
-    <div class="col-xs-12 col-sm-6">
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
-  <div class="card-category"><%=location.name%></div>
-  <div class="card-description">
-    <p><%= location.user.first_name %></p>
-    <p><%= location.coordinates %></p>
-    <p>$<%= location.price %></p>
-  </div>
-  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-  <a class="card-link" href="#" ></a>
+<br>
+<div class="container text-center">
+    <% if policy(Location).create? %>
+    <%= link_to 'Add a new location', new_location_path %>
+    <% end %>
 </div>
-   </div>
-<% end %>
+<div class="container">
+    <div class="row">
+        <% @locations.first(10).each do |location| %>
+        <div class="col-xs-12 col-sm-6">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+                <div class="card-category">
+                    <%= link_to location.name, location_path(location) %>
 
+
+                </div>
+                <div class="card-description">
+                    <h2><%= location.user.first_name %></h2>
+                    <p>
+                        <%= location.coordinates %>
+                    </p>
+                    <p>$
+                        <%= location.price %>
+                    </p>
+                </div>
+                <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+
+            </div>
+        </div>
+        <% end %>
     </div>
 </div>
-
-<%#  if current_user.is_scout %>
-<%# if policy(Location).create? %>
- <%#= link_to “New location”, new_location_path %>
-<%# end %>
-<%# end %>
