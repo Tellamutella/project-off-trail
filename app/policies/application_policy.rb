@@ -22,6 +22,10 @@ class ApplicationPolicy
     create?
   end
 
+  def dashboard?
+    false
+  end
+
   def update?
     false
   end
