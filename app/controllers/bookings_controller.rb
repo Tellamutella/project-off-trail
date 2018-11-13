@@ -1,11 +1,5 @@
 class BookingsController < ApplicationController
 skip_before_action :authenticate_user!, only: %i[new create]
-  def new
-    @booking = Booking.new
-    @location = Location.find(params[:location_id])
-    authorize @booking
-  end
-
   def create
     @booking = authorize Booking.new(booking_params)
     @location = Location.find(params[:location_id])
