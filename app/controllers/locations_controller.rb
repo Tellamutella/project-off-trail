@@ -1,13 +1,20 @@
 class LocationsController < ApplicationController
+  # before_action :set_user
+  skip_before_action :authenticate_user!, only: %i[index show]
+
   def new
     @location = Location.new
     authorize @location
   end
 
   def create
-    @location = Location.new(location_params)
-    authorize @location
-    # if @location.save ...
+    @location = authorize Location.new(location_params)
+    @location.user = policy(Location).user
+    if @location.save
+      redirect_to @location
+    else
+      render :new
+    end
   end
 
   def edit
@@ -24,9 +31,14 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @location = authorize Location.find(params[:id])
   end
 
   private
+
+  # def set_location
+  #   @location = Location.find(params[:id])
+  # end
 
   def location_params
     params.require(:location).permit(:name, :description, :price, :coordinates, :user_id)

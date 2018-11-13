@@ -1,0 +1,9 @@
+<%= simple_form_for [@user, @location] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%#= f.coordinates :coordinates %>
+  <%= f.button :button, type: :submit do %>
+  <%= icon('fas', 'check') %>
+  <% end %>
+<% end %>

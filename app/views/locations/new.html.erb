@@ -1,2 +1,7 @@
 <h1>Locations#new</h1>
-<p>Find me in app/views/locations/new.html.erb</p>
+<%= render 'form' %>
+<div class="btn-actions">
+    <%= link_to locations_path do %>
+    <%= icon('fas', 'angle-left') %>
+    <% end %>
+</div>

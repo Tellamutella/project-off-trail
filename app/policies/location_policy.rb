@@ -5,29 +5,28 @@ class LocationPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-    # only a scout can create a location
-    @user.is_scout
-  end
-
   def create?
-    new?
+    # only a scout can create a location
+    @user && @user.is_scout
   end
 
-  def edit
-    @user.is_scout && @record.user == @user
+  def new?
+    create?
   end
 
   def update?
-    edit?
+    @user && @user.is_scout && @record.user == @user
   end
 
-  def destroy
-    @user.is_scout && @record.user == @user
+  def edit?
+    update?
   end
 
-  def index
+  def destroy?
+    @user && @user.is_scout && @record.user == @user
+  end
+
+  def show?
     true
   end
-
 end
