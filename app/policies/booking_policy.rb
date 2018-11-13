@@ -3,15 +3,21 @@ class BookingPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-    def new?
-      true
-    end
-    def create?
-      true
-    end
+  end
 
-    def destroy?
-      record.user == user
-    end
+  def new?
+    create?
+  end
+
+  def create?
+    true
+  end
+
+  def show?
+    true
+  end
+
+  def destroy?
+    record.user == user
   end
 end

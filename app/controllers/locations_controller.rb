@@ -32,6 +32,8 @@ class LocationsController < ApplicationController
 
   def show
     @location = authorize Location.find(params[:id])
+    @booking = Booking.new
+    authorize @booking
   end
 
   private
