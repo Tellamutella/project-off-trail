@@ -1,7 +1,7 @@
 class LocationPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user: @user) # Location.where(user is current user)
+      scope.all # Location.where(user is current user)
     end
   end
 
@@ -25,4 +25,9 @@ class LocationPolicy < ApplicationPolicy
   def destroy
     @user.is_scout && @record.user == @user
   end
+
+  def index
+    true
+  end
+
 end
