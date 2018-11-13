@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'users#dashboard'
 
   resources :locations do
-    resources :bookings, only: %i[create]
+    resources :bookings, only: %i[new create]
   end
 
   resources :bookings, only: %i[destroy]
