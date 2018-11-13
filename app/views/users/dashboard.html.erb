@@ -1,0 +1,38 @@
+<div class="dashboardc">
+  <div class="infoboard">
+    <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+    <p><%= @current.first_name + " " + @current.last_name %></p>
+    <p><%= @current.location %> </p>
+    <p><%= @current.is_scout ? "Scout" : "Influencer"%>
+  </div>
+  <div clss="right">
+    <div class="bookings">
+      <div class="row">
+        <% @current.bookings.first(3).each do |user| %>
+         <div class="col-xs-12 col-sm-4">
+            <div class="db-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+                <div class="card-category">
+                    <%= link_to user.location.name, location_path(user.location) %>
+                </div>
+                <div class="card-description">
+                    <h2><%= user.location.user.first_name %></h2>
+                    <p>
+                        <%= user.location.coordinates %>
+                    </p>
+                    <p>$
+                        <%= user.location.price %>
+                    </p>
+                </div>
+                <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+            </div>
+        </div>
+        <% end %>
+    </div>
+  </div>
+
+    </div>
+    <div class="bookings2">
+
+    </div>
+  </div>
+</div>
