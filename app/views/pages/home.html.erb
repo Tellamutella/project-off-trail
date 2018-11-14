@@ -1,8 +1,30 @@
-<div class="banner-home"  style="background-image:
+<div class="banner-home" style="background-image:
          url('<%= image_path 'root', height: 500, width: 500 %>')">
-  <div class="banner-content">
-    <h1>Off Trail</h1>
-   <%= link_to "Become A Scout", scoutinfo_path,:class=>"btn btn-primary" %>
-    <%= link_to "Become An Influencer", influencerinfo_path,:class=>"btn btn-primary" %>
-  </div>
+    <div class="container">
+        <div class="banner-content">
+            <h1>Off Trail</h1>
+            <br>
+        </div>
+        <div class="container">
+            <a href="#join"><%= icon('fas', 'arrow-down') %></a>
+        </div>
+    </div>
+</div>
+<div id="join" class="banner-home" style="background-image:
+         url('<%= image_path 'leaves', height: 500, width: 500 %>')">
+    <div class="container">
+        <div class="banner-content">
+            <%= link_to locations_path do %>
+            <h4> <%= icon('fas', 'globe') %>
+            Explore</h4>
+            <% end %>
+            <br>
+            <%= link_to scoutinfo_path,:class=>"btn-home-join-us" do %>
+               Become a Scout
+            <% end %>
+            <%= link_to influencerinfo_path,:class=>"btn-home-join-us" do %>
+            Become an Influencer
+            <% end %>
+        </div>
+    </div>
 </div>

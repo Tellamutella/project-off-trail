@@ -1,3 +1,14 @@
+.btn-home-join-us {
+  padding: 8px 15px;
+  background-color: #fbc000;
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.7);
+  &:hover {
+    color: black;
+  }
+}
+
 
 .greenbutton {
   background-color: #6ed3cd;
