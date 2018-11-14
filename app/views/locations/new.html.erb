@@ -1,7 +1,22 @@
-<h1>Locations#new</h1>
-<%= render 'form' %>
-<div class="btn-actions">
-    <%= link_to locations_path do %>
-    <%= icon('fas', 'angle-left') %>
-    <% end %>
+<div class="user">
+    <header class="user__header">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+        <h1 class="user__title">EXPLORE</h1>
+    </header>
+
+    <form class="form">
+        <div class="form__group">
+            <input type="text" placeholder="Location name" class="form__input" />
+        </div>
+
+        <div class="form__group">
+            <input type="description" placeholder="Description" class="form__input" />
+        </div>
+
+        <div class="form__group">
+            <input type="price" placeholder="Price" class="form__input" />
+        </div>
+
+        <button class="btn" type="button">Add a Location</button>
+    </form>
 </div>
