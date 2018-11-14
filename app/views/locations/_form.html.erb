@@ -3,6 +3,8 @@
   <%= f.input :description %>
   <%= f.input :price %>
   <%#= f.coordinates :coordinates %>
+    <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
   <%= f.button :button, type: :submit do %>
   <%= icon('fas', 'check') %>
   <% end %>
