@@ -1,0 +1,62 @@
+.dashboard-grid {
+  color: white;
+  display: grid;
+  grid-template-columns: 200px repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: calc(100vh - 50px);
+}
+
+.db-card {
+  width: 400px;
+}
+
+
+.user-info {
+  grid-area: 1 / 1 / span 2 / span 1;
+  background-color: rgba(0,0,0,0.7);
+  margin: 15px 0;
+  padding: 30px;
+  border-radius: 15px;
+  width: 190px;
+
+  .user-info-text {
+  margin: 30px 0;
+  }
+
+.container-actions ul {
+  list-style: none;
+  color: white;
+  padding-left: 10px;
+  font-size: 18px;
+
+  i {
+    font-size: 14px;
+  }
+}
+
+
+}
+
+  .user-avatar {
+  text-align: center;
+  img {
+    width: 120px;
+    box-shadow: 1px 20px 20px -20px black;
+  }
+}
+
+.user-bookings {
+  grid-area: 1 / 2 / span 1 / span 3;
+  display: flex;
+}
+
+.user-bookmarked {
+  grid-area: 2 / 2 / span 1 / span 3;
+  display: flex;
+
+}
+.bookmarked-card {
+  padding: 10px;
+  border-top: 5px #fbc000;
+  margin: 10px;
+}
