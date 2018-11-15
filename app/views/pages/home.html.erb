@@ -1,51 +1,46 @@
 <div class="big">
-<div class="banner-home" style="background-image:
-         url('<%= cl_image_path 'root', height: 500, width: 500 %>')">
+  <div class="banner-home" style="background-image:
+  url('<%= cl_image_path 'root', height: 500, width: 500 %>')">
     <div class="container">
-        <div class="banner-content">
-            <h1>Off Trail.</h1>
-            <br>
-            <%= link_to locations_path do %>
-            <h4> <%= icon('fas', 'globe') %>
+      <div class="banner-content">
+        <h1>Off Trail.</h1>
+        <br>
+        <%= link_to locations_path do %>
+        <h4> <%= icon('fas', 'globe') %>
             Explore</h4>
-            <% end %>
-        </div>
-        <div class="container">
-            <a href="#join"><%= icon('fas', 'arrow-down') %></a>
-        </div>
-    </div>
-</div>
-
-<br>
-<br>
-<div class="showContent">
-      <img src="https://www.salutfromparis.com/wp-content/uploads/2018/01/luxembourg-gardens-964634_1920.jpg">
-    <div class="home_page_content">
-
-            <span> <%= link_to influencerinfo_path,:class=>"btn-home-join-us" do %>
-            INFLUENCER
-            <% end %></span>
+        <% end %>
+      </div>
+      <div class="container">
+        <a href="#join"><%= icon('fas', 'arrow-down') %></a>
+      </div>
     </div>
   </div>
-<br>
-<br>
-<div class="showContentB">
-  <div class="home_page_content">
-         <span><%= link_to scoutinfo_path,:class=>"btn-home-join-us" do %>
+  <br>
+  <br>
+  <div class="showContent">
+    <img src="#">
+      <span> <%= link_to influencerinfo_path,:class=>"btn-home-join-us" do %>
+      INFLUENCER
+      <% end %></span>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="showContentB">
+    <div class="home_page_content">
+      <span><%= link_to scoutinfo_path,:class=>"btn-home-join-us" do %>
          SCOUT
          <% end %></span>
-       </div>
-      <img src="https://www.salutfromparis.com/wp-content/uploads/2018/01/luxembourg-gardens-964634_1920.jpg">
+    </div>
+    <img src="#">
 </div>
-<br>
-<br>
-<div id="join" class="foot-banner" style="background-image:
+    <br>
+    <br>
+    <div id="join" class="foot-banner" style="background-image:
          url('<%= image_path 'leaves', height: 500, width: 500 %>')">
-
-    <div class="container">
+      <div class="container">
         <div class="banner-content">
         </div>
+      </div>
     </div>
-</div>
-</div>
-
+  </div>

@@ -1,221 +1,221 @@
 .big {
- display: flex;
- flex-direction: column;
- justify-content: space-around;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
 a {
-  color: white;
+ color: white;
 
-  &:hover {
-    text-decoration: none;
-    color: rgba(255,255,255, 0.6);
-  }
+ &:hover {
+   text-decoration: none;
+   color: rgba(255,255,255, 0.6);
+ }
 }
 
 .container a {
-  font-size: 50px;
-  text-align: center;
+ font-size: 50px;
+ text-align: center;
 }
 
-  i {font-size: 28px;}
+ i {font-size: 28px;}
 
 .banner-home {
-  color: white;
-  text-align: center;
-  height: 90vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  //background-size: cover !important;
-  position:relative;
-    display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity:0.83;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 70px;
-  background-color: #F5FFFA;
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
+ color: white;
+ text-align: center;
+ height: 90vh;
+ /* if you have a 70px navbar => height: calc(100vh - 70px); */
+ //background-size: cover !important;
+ position:relative;
+   display: flex;
+ align-items: center;
+ justify-content: center;
+ opacity:0.83;
+ margin-left: 100px;
+ margin-right: 100px;
+ margin-top: 70px;
+ background-color: #F5FFFA;
+ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+ background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
 
 }
 .banner h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
-  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
+ font-size: 50px;
+ font-weight: bold;
+ text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+ text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
 }
 .banner p {
-  font-size: 25px;
-  font-weight: lighter;
-  color: rgb(255, 255, 255);
-  opacity: 0.6;
-  margin-bottom: 30px;
+ font-size: 25px;
+ font-weight: lighter;
+ color: rgb(255, 255, 255);
+ opacity: 0.6;
+ margin-bottom: 30px;
 }// Specific CSS for your home-page
 
 .showContent{
-  display: flex;
-  height: 400px;
-  background: #f4f4f4;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
+ display: flex;
+ height: 400px;
+ background: #f4f4f4;
+ justify-content: space-between;
+ margin-left: 100px;
+ margin-right: 100px;
 }
 .showContentB {
-  display: flex;
-  height: 400px;
-  background: #f4f4f4;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
+ display: flex;
+ height: 400px;
+ background: #f4f4f4;
+ justify-content: space-between;
+ margin-left: 100px;
+ margin-right: 100px;
 }
 
 .img {
- box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 
 }
 
 .banner-content a {
-  margin: 20px;
-  color: #f6f8f9;
+ margin: 20px;
+ color: #f6f8f9;
 }
 
 .banner-content h1 {
-  font-family: 'Pacifico', cursive;
-  //font-family: 'PT Serif', serif;
-  font-size: 150px;
-  color: #f6f8f9 ;
+ font-family: 'Pacifico', cursive;
+ //font-family: 'PT Serif', serif;
+ font-size: 150px;
+ color: #f6f8f9 ;
 }
 
 .banner-content h4 {
-  font-size: 50px;
-  text-align: center;
-  color: #f6f8f9;
+ font-size: 50px;
+ text-align: center;
+ color: #f6f8f9;
 }
 
 .card {
-  height: 370px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
-  position: relative;
-  margin: 30px;
+ height: 370px;
+ text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+ background-size: cover !important;
+ background-position: center;
+ color: white;
+ position: relative;
+ margin: 30px;
 
-  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
+ box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
 
 }
 
 .card-user {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
+ position: absolute;
+ right: 20px;
+ top: 20px;
+ width: 90px;
+ height: 90px;
+ border-radius: 50%;
+ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
 }
 
 .card-category {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 30px;
-  letter-spacing: 5%;
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ font-size: 30px;
+ letter-spacing: 5%;
 }
 
 .card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+ position: absolute;
+ bottom: 10px;
+ left: 10px;
 }
 .card-description h2 {
-  font-size: 25px;
+ font-size: 25px;
 }
 .card-description p {
-  font-size: 20px;
+ font-size: 20px;
 
 }
 .card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-  text-decoration: none;
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ width: 100%;
+ z-index: 2;
+ background: black;
+ opacity: 0;
+ text-decoration: none;
 }
 .card-link:hover {
-  opacity: 0.1;
+ opacity: 0.1;
 }
 .location {
-  font-size: 10px;
+ font-size: 10px;
 }
 .content-card {
-  position:absolute;
-  top:200px;
-  left: 200px;
-  height:300px;
-  width:600px;
-  background-color: rgba(0,0,0,0.5);
-  z-index:1;
+ position:absolute;
+ top:200px;
+ left: 200px;
+ height:300px;
+ width:600px;
+ background-color: rgba(0,0,0,0.5);
+ z-index:1;
 }
 
 .content {
-    p{
-    font-size:20px;
-    font-weight: 900;
-    opacity:1;
-    z-index:2;
-  }
+   p{
+   font-size:20px;
+   font-weight: 900;
+   opacity:1;
+   z-index:2;
+ }
 }
 
 .scout-button {
-  position: absolute;
-  bottom:220px;
-  left: 420px;
+ position: absolute;
+ bottom:220px;
+ left: 420px;
 }
 
 .banner {
-  color: white;
-  text-align: center;
-  height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
-  position:relative;
+ color: white;
+ text-align: center;
+ height: 100vh;
+ /* if you have a 70px navbar => height: calc(100vh - 70px); */
+ background-size: cover !important;
+ position:relative;
 
 }
 
 .db-card {
-  height: 300px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
-  background-position: center;
-  color: white;
-  position: relative;
-  margin: 15px;
-  border-radius: 15px;
+ height: 300px;
+ text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+ background-size: cover !important;
+ background-position: center;
+ color: white;
+ position: relative;
+ margin: 15px;
+ border-radius: 15px;
 }
 
 .foot-banner {
-  text-align: center;
-  height: 160px;
-  background-color: #F5FFFA;
-  text-align: center;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  //background-size: cover !important;
-  position:relative;
-  display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
-  opacity:0.7;
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+ text-align: center;
+ height: 160px;
+ background-color: #F5FFFA;
+ text-align: center;
+ /* if you have a 70px navbar => height: calc(100vh - 70px); */
+ //background-size: cover !important;
+ position:relative;
+ display: flex;
+ margin-left: 100px;
+ margin-right: 100px;
+ opacity:0.7;
+ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 
 }
 
 .white {
-  display: flex;
+ display: flex;
 height: 80vh;
 color: black;
 justify-content: center;
@@ -223,9 +223,6 @@ align-items: center;
 }
 
 .home_page_content {
- text-align: center;
-  color: black;
+text-align: center;
+ color: black;
 }
-
-
-
