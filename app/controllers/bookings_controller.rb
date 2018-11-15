@@ -6,7 +6,7 @@ skip_before_action :authenticate_user!, only: %i[new create]
     @booking.location = @location
     @booking.user = current_user
     if @booking.save
-      redirect_to locations_path
+      redirect_to dashboard_path
     else
       render :new
     end
