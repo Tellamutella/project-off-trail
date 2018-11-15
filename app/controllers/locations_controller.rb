@@ -28,6 +28,14 @@ class LocationsController < ApplicationController
 
   def index
     @locations = policy_scope(Location).order(created_at: :desc)
+    @mlocations = Location.where.not(latitude: nil, longitude: nil)
+
+    @markers = @mlocations.map do |mlocation|
+      {
+        lng: mlocation.longitude,
+        lat: mlocation.latitude
+      }
+    end
   end
 
   def show
