@@ -9,7 +9,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
   mapboxgl.accessToken = process.env.MAPBOX_API_KEY; // API key from `.env`
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/pchi85/cjoi4hu3b2ap52rrzujbfbkfq'
+    style: 'mapbox://styles/pchi85/cjoi79g7g3gyb2smdkclk1qqk'
   });
 
   // adding markers
