@@ -1,11 +1,12 @@
-<div class="container text-center"></div>
-<div class="wrapper" style="background-color: #F1F1F0;">
-        <div class="add">
-        <%= link_to new_location_path do %>
-        <p> &#65291 </p>
-        <%end%>
-      </div>
-      <div class="map-center">
+<div class="locations-bg">
+<% if policy(Location).create? %>
+<div class="btn-add">
+    <%= link_to new_location_path do %>
+    +
+    <%end%>
+</div>
+<% end %>
+  <div class="map-center">
         <div
           id="map"
           style="width: 70%;
@@ -18,28 +19,28 @@
         <% @locations.first(10).each do |location| %>
         <div class="col-xs-12 col-sm-6">
             <%if location.photo.present? %>
-            <div class="card"   style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
          url('<%= cl_image_path location.photo, height: 300, width: 400%>')">
-              <% else %>
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
-                <% end %>
-                <div class="card-category">
-                    <%= link_to location.name, location_path(location) %>
+                <% else %>
+                <div class="card location-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+                    <% end %>
+                    <div class="card-category">
+                        <%= link_to location.name, location_path(location) %>
+                    </div>
+                    <div class="card-description">
+                        <h2>Scout : <%= location.user.first_name.capitalize + " " +location.user.last_name.capitalize %></h2>
+                        <p>
+                            <%= location.coordinates %>
+                        </p>
+                        <p>$
+                            <%= location.price %>
+                        </p>
+                    </div>
+                    <%= cl_image_tag location.user.photo, class: "card-user"%>
                 </div>
-                <div class="card-description">
-                    <h2>Scout : <%= location.user.first_name + " " +location.user.last_name %></h2>
-                    <p>
-                        <%= location.coordinates %>
-                    </p>
-                    <p>$<%= location.price %>
-                    </p>
-                </div>
-                  <%= cl_image_tag location.user.photo, class: "card-user"%>
             </div>
+            <% end %>
         </div>
-        <% end %>
     </div>
 </div>
 </div>
-
-

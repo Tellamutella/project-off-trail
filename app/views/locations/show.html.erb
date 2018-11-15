@@ -1,7 +1,10 @@
 <div class="back">
-  <div class="container">
-    <div class="location-info" style="margin-top: 20px;">
+<div class="b-container">
+
+ <div class="location-info" style="margin-top: 100px;">
+
       <%= cl_image_tag @location.photo, height: 500, width: 700 , class: "show-image"%>
+
       <h3><%= @location.name %></h3>
       <p>Scout:
         <%= @location.user.first_name %>
@@ -18,25 +21,85 @@
       <%= icon('fas', 'angle-left') %>
       <% end %>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
+</div>
+   <div class="b-container">
       <div
         id="map"
         style="width: 600px;
         height: 600px; margin-top: 20px;"
         data-markers="<%= @markers.to_json %>">
       </div>
-      <div class="col-md-6 col-md-offset-1" style="margin-top: px;">
-        <h3>Booking for <%= @location.name %> now!</h3>
-        <%= simple_form_for [@location, @booking] do |f| %>
-        <%= f.input :date, as: :string, required: false, input_html: { class: "datepicker"} %>
-        <%= f.submit "Confirm Booking", class: "btn btn-danger" %>
-        <% end %>
-      </div>
+
+    <h3>Booking for <%= @location.name %> now!</h3>
+    <form action="#">
+    <label><p>Pick a date</label></p>
+    <input type="date" class="datepicker" >
+    </form>
+    <button id="myBtn">Book!</button>
     </div>
   </div>
+
+
+          <!-- Trigger/Open The Modal -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+
+        <h3>Your booking is almost done!!!!</h3>
+        <p>Name: <%= @location.name %></p>
+        <p>Scout:
+            <%= @location.user.first_name %>
+            <%= @location.user.last_name %>
+        </p>Description: <%= @location.description %>
+        <p>Price:
+            $<%= @location.price %>
+        </p>
+<div class="inner-date">
+  </div>
+    <%= cl_image_tag @location.user.photo, height: 300, width: 300 , class: "card-user"%>
+        <%= simple_form_for [@location, @booking] do |f| %>
+          <%= f.input :date, as: :hidden, id: "date-param" %>
+          <%= f.button :submit, "Confirm Booking!", class: "my-button" %>
+
+        <% end %>
+  </div>
+
 </div>
-</div>
-</div>
-</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+   // step 1. store this inside of a let or const
+  // step 2. add some innerhtml // new html tag to the mymodal
+  let date = document.querySelector('.selected').getAttribute("aria-label")
+    modal.style.display = "block";
+  let element = document.querySelector('.inner-date')
+  element.innerHTML = '';
+  element.insertAdjacentHTML('beforeend', `<p> Date: ${date}</p>`);
+  let form = document.querySelector('#booking_date');
+  form.value = date;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>

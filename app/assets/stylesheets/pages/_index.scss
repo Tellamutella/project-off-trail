@@ -1,23 +1,5 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "dashboard";
-
-.avatar-large {
-  border-radius: 50%;
-  margin: 60px;
-
-}
-
-.wrapper {
-  width:100%;
-  min-height:100%;
-  }
-
-.add {
-  font-size: 100px;
-  text-align: center;
-  color: #faf9f9;
-  text-decoration: none;
-}
-
-
+@import "location_index";
+@import "modal";
