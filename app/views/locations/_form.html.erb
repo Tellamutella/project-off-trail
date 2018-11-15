@@ -1,11 +1,18 @@
 <%= simple_form_for [@user, @location] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%#= f.coordinates :coordinates %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :address, id: "location_address" %>
+    <%= f.input :price %>
     <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :button, type: :submit do %>
-  <%= icon('fas', 'check') %>
-  <% end %>
+      <%= f.input :photo_cache, as: :hidden %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :button, type: :submit do %>
+    <%= icon('fas', 'check') %>
+    <% end %>
+  </div>
 <% end %>
