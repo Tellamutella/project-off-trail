@@ -7,23 +7,42 @@ a {
   }
 }
 
+.container a {
+  font-size: 50px;
+  text-align: center;
+}
+
 
 
 .banner-home {
   color: white;
   text-align: center;
-  height: 100vh;
+  height: 90vh;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
+  //background-size: cover !important;
   position:relative;
     display: flex;
   align-items: center;
   justify-content: center;
+  opacity:0.83;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 70px;
+  background-color: #F5FFFA;
+  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+  background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
+
 }
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
 }
 .banner p {
   font-size: 25px;
@@ -35,11 +54,19 @@ a {
 
 .banner-content a {
   margin: 20px;
+  color: #f6f8f9;
 }
 
 .banner-content h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 90px;
+  font-size: 150px;
+  color: #f6f8f9;
+}
+
+.banner-content h4 {
+  font-size: 50px;
+  text-align: center;
+  color: #f6f8f9;
 }
 
 .card {
@@ -50,7 +77,7 @@ a {
   color: white;
   position: relative;
   margin: 30px;
-  border-radius: 15px;
+
   -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
   -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
   box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
@@ -63,9 +90,9 @@ a {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
-  -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
-  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
+  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
+  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
 }
 
 .card-category {
@@ -150,3 +177,37 @@ a {
   margin: 15px;
   border-radius: 15px;
 }
+
+.foot-banner {
+  text-align: center;
+  height: 160px;
+  background-color: #F5FFFA;
+  text-align: center;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  //background-size: cover !important;
+  position:relative;
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  opacity:0.87;
+  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+
+}
+
+.white {
+  display: flex;
+height: 80vh;
+color: black;
+justify-content: center;
+align-items: center;
+}
+
+.home_page_content {
+ text-align: center;
+  color: black;
+}
+
+
+
