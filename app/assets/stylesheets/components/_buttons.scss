@@ -1,26 +1,10 @@
 .btn-home-join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 30px 35px;
-  letter-spacing: 0.05em;
-  background-color: #2b2b2b;//#6f7376;//#010101;//#cc8400;   //#FF7F50; //#fbc000;
   font-weight: bold;
-  //border-radius: 2px;
-  display: inline-block;
-  width: 275px;
-  //opacity: 0.87;
-  margin: 250px;
-  color: #f6f8f9;//#191000;
- -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
- -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
- box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  &:hover {
-    //color: #f6f8f9 //#010101;
-    opacity: 0.87;
-  }
 
-  span {
-    width: 300px;
-  }
 }
 
 
