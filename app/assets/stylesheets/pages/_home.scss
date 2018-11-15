@@ -1,3 +1,8 @@
+.big {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+}
 a {
   color: white;
 
@@ -15,6 +20,7 @@ a {
 i {
   font-size: 28px;
 }
+
 .banner-home {
   color: white;
   text-align: center;
@@ -26,16 +32,11 @@ i {
   align-items: center;
   justify-content: center;
   opacity:0.83;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 70px;
   background-color: #F5FFFA;
-  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
   box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
   background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
 
 }
@@ -53,6 +54,28 @@ i {
   margin-bottom: 30px;
 }// Specific CSS for your home-page
 
+.showContent{
+  display: flex;
+  height: 400px;
+  background: #f4f4f4;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.showContentB {
+  display: flex;
+  height: 400px;
+  background: #f4f4f4;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.img {
+ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+
+}
+
 .banner-content a {
   margin: 20px;
   color: #f6f8f9;
@@ -60,8 +83,9 @@ i {
 
 .banner-content h1 {
   font-family: 'Pacifico', cursive;
+  //font-family: 'PT Serif', serif;
   font-size: 150px;
-  color: #f6f8f9;
+  color: #f6f8f9 ;
 }
 
 .banner-content h4 {
@@ -78,10 +102,9 @@ i {
   color: white;
   position: relative;
   margin: 30px;
-  border-radius: 5px;
-  -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
-  -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
-  box-shadow: 1px 20px 20px -20px rgba(0,0,0,0.85);
+
+  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
+
 }
 
 .card-user {
@@ -91,8 +114,6 @@ i {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
-  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
   box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.08);
 }
 
@@ -190,9 +211,7 @@ i {
   display: flex;
   margin-left: 100px;
   margin-right: 100px;
-  opacity:0.87;
-  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
+  opacity:0.7;
   box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 
 }
