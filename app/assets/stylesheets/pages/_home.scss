@@ -12,10 +12,9 @@ a {
   text-align: center;
 }
 
-  i {font-size: 28px;
-  }
-
-
+i {
+  font-size: 28px;
+}
 .banner-home {
   color: white;
   text-align: center;
@@ -79,10 +78,10 @@ a {
   color: white;
   position: relative;
   margin: 30px;
-
+  border-radius: 5px;
   -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
   -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
-  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
+  box-shadow: 1px 20px 20px -20px rgba(0,0,0,0.85);
 }
 
 .card-user {

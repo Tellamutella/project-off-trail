@@ -1,9 +1,10 @@
-
-  <div class="back">
+<div class="back">
 <div class="b-container">
 
-    <div class="location-info" style="margin-top: 20px;">
+ <div class="location-info" style="margin-top: 100px;">
+
       <%= cl_image_tag @location.photo, height: 500, width: 700 , class: "show-image"%>
+
       <h3><%= @location.name %></h3>
       <p>Scout:
         <%= @location.user.first_name %>
@@ -20,11 +21,8 @@
       <%= icon('fas', 'angle-left') %>
       <% end %>
     </div>
-
-
 </div>
    <div class="b-container">
-    
       <div
         id="map"
         style="width: 600px;
@@ -68,7 +66,8 @@
 
         <% end %>
   </div>
-      </div>
+
+</div>
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -104,7 +103,3 @@ window.onclick = function(event) {
     }
 }
 </script>
-
-
-
-
