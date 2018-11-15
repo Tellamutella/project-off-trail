@@ -1,8 +1,33 @@
-.big {
- display: flex;
- flex-direction: column;
- justify-content: space-around;
+.grid-home-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 70vh;
+  text-align: center;
+  margin: 100px;
 }
+.scout-title, .scout-img, .inf-img, .inf-title {
+  width: 500px;
+  margin: 20px;
+  padding: 0;
+}
+
+.scout-title {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.scout-img {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.inf-img {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.inf-title {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
 a {
   color: white;
 
@@ -12,21 +37,15 @@ a {
   }
 }
 
-.container a {
-  font-size: 50px;
-  text-align: center;
-}
-
-  i {font-size: 28px;}
+// BELOW IS LE WAGON, ABOVE IS FOR HOMEPAGE GRID
 
 .banner-home {
   color: white;
   text-align: center;
-  height: 90vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  //background-size: cover !important;
+  height: calc(100vh - 70px);
+  background-size: cover !important;
   position:relative;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity:0.83;
@@ -34,16 +53,15 @@ a {
   margin-right: 100px;
   margin-top: 70px;
   background-color: #F5FFFA;
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
-
 }
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
   text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
 }
+
 .banner p {
   font-size: 25px;
   font-weight: lighter;
@@ -52,22 +70,6 @@ a {
   margin-bottom: 30px;
 }// Specific CSS for your home-page
 
-.showContent{
-  display: flex;
-  height: 400px;
-  background: #f4f4f4;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-.showContentB {
-  display: flex;
-  height: 400px;
-  background: #f4f4f4;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
-}
 
 .img {
  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
@@ -198,34 +200,8 @@ a {
   border-radius: 15px;
 }
 
-.foot-banner {
-  text-align: center;
-  height: 160px;
-  background-color: #F5FFFA;
-  text-align: center;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  //background-size: cover !important;
-  position:relative;
-  display: flex;
-  margin-left: 100px;
-  margin-right: 100px;
-  opacity:0.7;
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-
-}
-
-.white {
-  display: flex;
-height: 80vh;
-color: black;
-justify-content: center;
-align-items: center;
-}
-
 .home_page_content {
  text-align: center;
   color: black;
 }
-
-
 
