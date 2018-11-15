@@ -10,6 +10,7 @@ if (mapElement) { // only build a map if there's a div#map to inject into
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/pchi85/cjoi79g7g3gyb2smdkclk1qqk'
+
   });
 
   // adding markers
