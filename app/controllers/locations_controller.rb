@@ -41,9 +41,14 @@ class LocationsController < ApplicationController
   end
 
   def show
-    @location = authorize Location.find(params[:id])
+    @location = Location.find(params[:id])
     @booking = Booking.new
     authorize @booking
+    @markers = [{
+        lng: @location.longitude,
+        lat: @location.latitude,
+        infoWindow: { content: render_to_string(partial: "/locations/map_window", locals: { location: @location })}
+      }]
   end
 
   private
