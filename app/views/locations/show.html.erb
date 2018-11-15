@@ -1,42 +1,42 @@
-  <div class="back">
-<div class="container">
+<div class="back">
+  <div class="container">
     <div class="location-info" style="margin-top: 20px;">
-
       <%= cl_image_tag @location.photo, height: 500, width: 700 , class: "show-image"%>
-        <h3><%= @location.name %></h3>
-        <p>Scout:
-            <%= @location.user.first_name %>
-            <%= @location.user.last_name %>
-        </p>Description : <%= @location.description %>
-        <p>Price:
-            $<%= @location.price %>
-        </p>
+      <h3><%= @location.name %></h3>
+      <p>Scout:
+        <%= @location.user.first_name %>
+        <%= @location.user.last_name %>
+      </p>Description :
+      <%= @location.description %>
+      <p>Price:
+        $
+        <%= @location.price %>
+      </p>
     </div>
-
     <div class="btn-actions">
       <%= link_to locations_path do %>
-        <%= icon('fas', 'angle-left') %>
+      <%= icon('fas', 'angle-left') %>
       <% end %>
     </div>
-
-</div>
-   <div class="container">
-    <div style="margin-top:20px;">
-    <%= cl_image_tag 'Screenshot_2018-11-14_at_1.53.19_PM', height: 500, width: 700 , class: "show-image"%>
   </div>
-          <div class="row">
-            <div class="col-md-6 col-md-offset-1" style="margin-top: px;">
-              <h3>Booking for <%= @location.name %> now!</h3>
-              <%= simple_form_for [@location, @booking] do |f| %>
-              <%= f.input :date, as: :string, required: false, input_html: { class: "datepicker"} %>
-              <%= f.submit "Confirm Booking", class: "btn btn-danger" %>
-              <% end %>
-            </div>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div
+        id="map"
+        style="width: 600px;
+        height: 600px; margin-top: 20px;"
+        data-markers="<%= @markers.to_json %>">
       </div>
-</div>
-
-          </div>
+      <div class="col-md-6 col-md-offset-1" style="margin-top: px;">
+        <h3>Booking for <%= @location.name %> now!</h3>
+        <%= simple_form_for [@location, @booking] do |f| %>
+        <%= f.input :date, as: :string, required: false, input_html: { class: "datepicker"} %>
+        <%= f.submit "Confirm Booking", class: "btn btn-danger" %>
+        <% end %>
       </div>
+    </div>
+  </div>
 </div>
-
+</div>
+</div>
+</div>

@@ -4,19 +4,7 @@
         <h1 class="user__title">EXPLORE</h1>
     </header>
 
-    <form class="form">
-        <div class="form__group">
-            <input type="text" placeholder="Location name" class="form__input" />
-        </div>
-
-        <div class="form__group">
-            <input type="description" placeholder="Description" class="form__input" />
-        </div>
-
-        <div class="form__group">
-            <input type="price" placeholder="Price" class="form__input" />
-        </div>
-
-        <button class="btn" type="button">Add a Location</button>
-    </form>
+    <div class="form form__input">
+      <%= render 'form' %>
+    </div>
 </div>

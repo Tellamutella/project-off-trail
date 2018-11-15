@@ -8,8 +8,9 @@ class LocationsController < ApplicationController
   end
 
   def create
-    @location = authorize Location.new(location_params)
-    @location.user = policy(Location).user
+    @location = Location.new(location_params)
+    @location.user = current_user
+    authorize @location
     if @location.save
       redirect_to @location
     else
@@ -28,6 +29,15 @@ class LocationsController < ApplicationController
 
   def index
     @locations = policy_scope(Location).order(created_at: :desc)
+    @mlocations = Location.where.not(latitude: nil, longitude: nil)
+
+    @markers = @mlocations.map do |mlocation|
+      {
+        lng: mlocation.longitude,
+        lat: mlocation.latitude,
+        infoWindow: { content: render_to_string(partial: "/locations/map_window", locals: { location: mlocation })}
+      }
+    end
   end
 
   def show
@@ -43,6 +53,6 @@ class LocationsController < ApplicationController
   # end
 
   def location_params
-    params.require(:location).permit(:name, :description, :price, :coordinates, :user_id, :photo)
+    params.require(:location).permit(:name, :description, :price, :coordinates, :user_id, :photo, :address)
   end
 end
