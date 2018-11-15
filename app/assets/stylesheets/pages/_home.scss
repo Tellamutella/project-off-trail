@@ -1,3 +1,33 @@
+.grid-home-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 70vh;
+  text-align: center;
+  margin: 100px;
+}
+.scout-title, .scout-img, .inf-img, .inf-title {
+  width: 500px;
+  margin: 20px;
+  padding: 0;
+}
+
+.scout-title {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.scout-img {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.inf-img {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.inf-title {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
 a {
   color: white;
 
@@ -7,37 +37,22 @@ a {
   }
 }
 
-.container a {
-  font-size: 50px;
-  text-align: center;
-}
-
-i {
-  font-size: 28px;
-}
+// BELOW IS LE WAGON, ABOVE IS FOR HOMEPAGE GRID
 
 .banner-home {
   color: white;
   text-align: center;
-  height: 90vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  //background-size: cover !important;
+  height: calc(100vh - 70px);
+  background-size: cover !important;
   position:relative;
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   opacity:0.83;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
   margin-top: 70px;
   background-color: #F5FFFA;
-  -webkit-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  -moz-box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-  box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
-
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, .15)), to(rgba(0, 0, 0, .25))), -webkit-gradient(linear, left top, right bottom, color-stop(0, rgba(255, 255, 255, 0)), color-stop(0.5, rgba(255, 255, 255, .1)), color-stop(0.501, rgba(255, 255, 255, 0)), color-stop(1, rgba(255, 255, 255, 0)));
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), -moz-linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
-  background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)), l
 
 }
 .banner h1 {
