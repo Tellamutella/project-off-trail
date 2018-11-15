@@ -1,11 +1,8 @@
-<div style="background-image:
-        url('<%= cl_image_path 'water', height: 500, width: 500 %>')">
-
 <div class="container">
     <div class="dashboard-grid">
         <div class="user-info">
             <div class="user-avatar">
-                <img class="img-circle" src="https://picsum.photos/150/150">
+                <%= cl_image_tag @current.photo, class: 'img-circle' %>
             </div>
                 <div class="user-info-text">
                     <h4><strong><%= @current.first_name + " " + @current.last_name %></strong></h4>
@@ -31,24 +28,21 @@
             </div>
             <div class="user-bookings">
                 <!-- ### -->
-                <% @current.bookings.first(3).each do |booking| %>
+                <% @current.bookings.each do |booking| %>
 
                         <div class="db-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
                         url('<%= cl_image_path booking.location.photo, width: 400, height: 300 %>');">
-                            <div class="card-category">
-                                <%= link_to booking.location.name, location_path(booking.location) %>
-                            </div>
-                            <div class="card-description">
-                                <h2><%= booking.location.user.first_name %></h2>
-                                <p>
-                                    <%= booking.location.coordinates %>
-                                </p>
-                                <p>$
-                                    <%= booking.location.price %>
-                                </p>
-                            </div>
-                            <!-- change to user.photo -->
+                        <div class="container">
+                            <h2> <%= link_to booking.location.name, location_path(booking.location) %></h2>
+                            <h3><%= booking.location.user.first_name %></h3>
+                            <p>
+                                <%= booking.location.coordinates %>
+                            </p>
+                            <p>$
+                                <%= booking.location.price %>
+                            </p>
                             <%= cl_image_tag booking.user.photo, class: 'card-user' %>
+                    </div>
                     </div>
 
                     <% end %>
@@ -56,14 +50,13 @@
             </div>
 
     <div class="user-bookmarked">
-      <%#= icon('fas', 'heart') %>
-
-        <% @locations.first(3).each do |l| %>
+        <% @locations.sample(3).each do |l| %>
         <div class="bookmarked-card">
          <h4><%= l.name %></h4>
-          <p> <%= l.description %></p>
-          <h5><%= l.user.first_name %></h5>
-          <img class="img-rounded" src="https://picsum.photos/250/150">
+          <h5><%= l.description %></h5>
+          <%= link_to location_path(l) do %>
+          <%= cl_image_tag l.photo, width: 400, height: 300 %>
+          <% end %>
         </div>
         <% end %>
     </div>
