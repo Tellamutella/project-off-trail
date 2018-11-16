@@ -48,24 +48,35 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-        <h3>Your booking is almost done!!!!</h3>
-        <p>Name: <%= @location.name %></p>
-        <p>Scout:
+    <div class="modal-info">
+        <h2>Your booking is almost done!</h2>
+        <h4>Review and pay</h4>
+        <hr>
+        <p><strong>Name:</strong><%= @location.name %></p>
+
+        <p><strong>Scout:</strong>
             <%= @location.user.first_name %>
             <%= @location.user.last_name %>
-        </p>Description: <%= @location.description %>
-        <p>Price:
+        </p>
+
+        <p><strong>Description:</strong><%= @location.description %></p>
+
+        <p><strong>Price:</strong>
             $<%= @location.price %>
         </p>
+       <hr>
 <div class="inner-date">
   </div>
-    <%= cl_image_tag @location.user.photo, height: 300, width: 300 , class: "card-user"%>
+</div>
+  <%= cl_image_tag @location.user.photo, height: 300, width: 300 , class: "card-user"%>
+    <%= cl_image_tag @location.photo, height: 400, width: 600 , class: "modal-image"%>
         <%= simple_form_for [@location, @booking] do |f| %>
           <%= f.input :date, as: :hidden, id: "date-param" %>
-          <%= f.button :submit, "Confirm Booking!", class: "my-button" %>
+          <%= f.button :submit, "Confirm and pay", class: "my-button" %>
 
         <% end %>
   </div>
+
 
 </div>
 <script>
@@ -87,7 +98,7 @@ btn.onclick = function() {
   modal.style.display = "block";
   let element = document.querySelector('.inner-date')
   element.innerHTML = '';
-  element.insertAdjacentHTML('beforeend', `<p> Date: ${date}</p>`);
+  element.insertAdjacentHTML('beforeend', `<p> <strong>Date:</strong> ${date}</p>`);
   let form = document.querySelector('#booking_date');
   form.value = date;
 }
