@@ -48,8 +48,6 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-
-
         <h3>Your booking is almost done!!!!</h3>
         <p>Name: <%= @location.name %></p>
         <p>Scout:
@@ -85,7 +83,8 @@ btn.onclick = function() {
    // step 1. store this inside of a let or const
   // step 2. add some innerhtml // new html tag to the mymodal
   let date = document.querySelector('.selected').getAttribute("aria-label")
-    modal.style.display = "block";
+
+  modal.style.display = "block";
   let element = document.querySelector('.inner-date')
   element.innerHTML = '';
   element.insertAdjacentHTML('beforeend', `<p> Date: ${date}</p>`);
