@@ -37,9 +37,19 @@ a {
  }
 }
 
+.btn-home-join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
 // BELOW IS LE WAGON, ABOVE IS FOR HOMEPAGE GRID
 
 .banner-home {
+  opacity: 0.95;
   color: white;
   text-align: center;
   height: calc(100vh - 70px);
@@ -48,7 +58,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity:0.83;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 70px;
