@@ -1,4 +1,5 @@
 class Location < ApplicationRecord
+  has_many :reviews
   belongs_to :user
   mount_uploader :photo, PhotoUploader
 
