@@ -4,7 +4,9 @@
   <%= form_tag("/search", method: 'get', remote: true ) do %>
   <%= label_tag(:query, 'Search for:') %>
   <%= text_field_tag(:query)%>
+  <span class="btn-search">
   <%= submit_tag("Find") %>
+  </span>
   <% end %>
 </div>
 <!-- ### -->
