@@ -5,11 +5,28 @@
   height: 70vh;
   text-align: center;
   margin: 100px;
+// background-color: RGB(181, 198, 208, 0.6);
 }
+
+.foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 30vh;
+  text-align: center;
+  margin: 100px;
+}
+
+
+
 .scout-title, .scout-img, .inf-img, .inf-title {
   width: 500px;
   margin: 20px;
   padding: 0;
+}
+
+.scout-title p {
+ color: #4d4d4d;
 }
 
 .scout-title {
@@ -30,7 +47,8 @@
 }
 
 a {
- color: white;
+ color: #f6f8f9;
+ text-decoration: none;
 
  &:hover {
    text-decoration: none;
@@ -67,7 +85,8 @@ a {
 .banner p {
  font-size: 25px;
  font-weight: lighter;
- color: rgb(255, 255, 255);
+ //color: rgb(255, 255, 255);
+ color: #4d4d4d;
  opacity: 0.6;
  margin-bottom: 30px;
 }// Specific CSS for your home-page
@@ -177,7 +196,17 @@ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 .scout-button {
  position: absolute;
  bottom:220px;
- left: 420px;
+ left: 320px;
+ font-size: 40px;
+ font-weight: bold;
+}
+
+.influencer-button {
+ position: absolute;
+ bottom:220px;
+ left: 280px;
+ font-size: 40px;
+ font-weight: bold;
 }
 
 .banner {
@@ -204,4 +233,22 @@ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 .home_page_content {
 text-align: center;
  color: black;
+}
+
+.social {
+  height: 100vh;
+  width: 50px;
+  position: fixed;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
+
+}
+
+.social ul {
+  list-style: none;
+  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
 }
