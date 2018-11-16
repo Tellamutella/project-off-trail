@@ -1,0 +1,2 @@
+const locations = document.getElementById('search_results_and_index')
+locations.innerHTML = '<%= j render "locations/indexcards", locations: @locations, mlocations: @mlocations, markers: @markers %>'
