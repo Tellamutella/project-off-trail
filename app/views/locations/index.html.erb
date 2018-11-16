@@ -1,9 +1,13 @@
 <div class="locations-bg" style="margin-top: 100px;">
+  <!-- style search-bar later!!! -->
+<div class="search-bar">
   <%= form_tag("/search", method: 'get', remote: true ) do %>
   <%= label_tag(:query, 'Search for:') %>
   <%= text_field_tag(:query)%>
   <%= submit_tag("Find") %>
   <% end %>
+</div>
+<!-- ### -->
   <div id="results"></div>
   <div class="map-center">
     <div id="map" style="width: 70%;
