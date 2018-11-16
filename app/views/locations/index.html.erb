@@ -1,46 +1,17 @@
-<div class="locations-bg">
-<% if policy(Location).create? %>
-<div class="btn-add">
-    <%= link_to new_location_path do %>
-    +
-    <%end%>
-</div>
-<% end %>
-  <div class="map-center">
-        <div
-          id="map"
-          style="width: 70%;
-          height: 500px;"
-          data-markers="<%= @markers.to_json %>"
-        ></div>
+<div class="locations-bg style ">
+  <div class="big-container">
+    <%= form_tag("/search", method: 'get', remote: true ) do %>
+    <%= label_tag(:query, 'Search for:') %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Find") %>
+    <% end %>
+    <div id="results"></div>
+    <div id="search_results_and_index">
+      <div class="map-center">
+        <div id="map" style="width: 100%;
+        height: 400px; margin-top: 50px;" data-markers="<%= @markers.to_json %>"></div>
       </div>
-<div class="container">
-    <div class="row">
-        <% @locations.first(10).each do |location| %>
-        <div class="col-xs-12 col-sm-6">
-            <%if location.photo.present? %>
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path location.photo, height: 300, width: 400%>')">
-                <% else %>
-                <div class="card location-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
-                    <% end %>
-                    <div class="card-category">
-                        <%= link_to location.name, location_path(location) %>
-                    </div>
-                    <div class="card-description">
-                        <h2>Scout : <%= location.user.first_name.capitalize + " " +location.user.last_name.capitalize %></h2>
-                        <p>
-                            <%= location.coordinates %>
-                        </p>
-                        <p>$
-                            <%= location.price %>
-                        </p>
-                    </div>
-                    <%= cl_image_tag location.user.photo, class: "card-user-d"%>
-                </div>
-            </div>
-            <% end %>
-        </div>
+      <%= render 'indexcards', locations: @locations %>
     </div>
-</div>
+  </div>
 </div>

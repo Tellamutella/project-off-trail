@@ -151,7 +151,6 @@ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
  color: white;
  position: relative;
  margin: 30px;
-
  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.41);
 
 }
@@ -283,11 +282,15 @@ text-align: center;
   left: 0;
   display: flex;
   align-items: center;
-  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
-
 }
 
 .social ul {
   list-style: none;
-  text-shadow: -2px -2px 9px rgba(150, 150, 150, 1);
+
+  li {
+    opacity: 0.9;
+  }
+
+.big-container {
+  margin: 100px;
 }
