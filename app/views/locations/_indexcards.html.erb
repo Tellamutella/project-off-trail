@@ -1,0 +1,29 @@
+<!-- <div class="notcontainer"> -->
+    <div class="row">
+      <% locations.first(10).each do |location| %>
+      <div class="col-xs-12 col-sm-6">
+        <%if location.photo.present? %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path location.photo, height: 250, width: 300 %>')">
+          <% else %>
+          <div class="card location-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/random');">
+            <% end %>
+            <div class="card-category">
+              <%= link_to location.name, location_path(location) %>
+            </div>
+            <div class="card-description">
+              <h2>Scout : <%= location.user.first_name.capitalize + " " +location.user.last_name.capitalize %></h2>
+              <p>
+                <%= location.coordinates %>
+              </p>
+              <p>$
+                <%= location.price %>
+              </p>
+            </div>
+            <%= cl_image_tag location.user.photo, class: "card-user"%>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <!-- </div> -->
