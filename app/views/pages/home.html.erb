@@ -2,43 +2,46 @@
 
 <div class="big">
 <div class="banner-home" style="background-image:
-         url('<%= cl_image_path 'root', height: 500, width: 500 %>')">
+         url('<%= cl_image_path 'plane', height: 500, width: 500 %>')">
     <div class="banner-content">
+      <div class="site-title">
         <h1>Off Trail</h1>
-
+      </div>
+<!-- add a search bar for explore button here -->
+<div class="btn-explore">
         <%= link_to locations_path do %>
-        <h4> <%= icon('fas', 'globe') %>
-            Explore</h4>
+        <%= icon('fas', 'globe') %> Explore now
         <% end %>
-        <a href="#join"><%= icon('fas', 'arrow-down') %></a>
+</div>
+<!-- ### -->
+<hr>
+        <a href="#jump-info" class="home-down-arrow"><%= icon('fas', 'arrow-down') %></a>
     </div>
 </div>
 
+<div id="jump-info">
 <div class="grid-home-2x2">
     <div class="scout-title">
         <h3> <%= link_to scoutinfo_path,:class=>"btn-home-join-us" do %>SCOUT<% end %></h3>
         <hr>
         <p>The domain name info is a generic top-level domain (gTLD) in the Domain Name System (DNS) of the Internet. The name is derived from information, though registration requirements do not prescribe any particular theme. The info TLD was a response to I</p>
     </div>
-    <div class="scout-img">
-        <img src="https://picsum.photos/500/500" alt="">
-    </div>
+        <div class="scout-img">
+            <img src="https://picsum.photos/500/500" alt="">
+        </div>
         <div class="inf-img">
             <img src="https://picsum.photos/500/500" alt="">
-    </div>
+       </div>
             <div class="inf-title">
                 <h3>
               <%= link_to influencerinfo_path,:class=>"btn-home-join-us" do %>INFLUENCER<% end %></h3>
                 <hr>
                 <p>The domain name info is a generic top-level domain (gTLD) in the Domain Name System (DNS) of the Internet. The name is derived from information, though registration requirements do not prescribe any particular theme. The info TLD was a response to I</p>
             </div>
-        </div>
+</div>
         <div style="background-image:
          url('<%= cl_image_path 'leaves', height: 500, width: 500 %>')">
         </div>
 </div>
-
-<div class="foot">
 </div>
-
 
