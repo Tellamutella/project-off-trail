@@ -1,9 +1,16 @@
 .btn-add {
-  margin-top: 80px;
+  margin-bottom: 80px;
   font-size: 100px;
   text-align: center;
-  color: #faf9f9;
+
   text-decoration: none;
+
+  a {
+    color: #446582;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
 }
 .search-bar {
   text-align: center;
@@ -11,8 +18,8 @@
 }
 
 //######## Style the find button later!! ##########
-.btn-search submit_tag {
-  border-radius: 3px;
-  border: none;
-  background: #fbc000;
-}
+// .btn-search submit_tag {
+//   border-radius: 3px;
+//   border: none;
+//   background: #fbc000;
+// }
