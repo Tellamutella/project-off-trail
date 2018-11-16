@@ -5,11 +5,28 @@
   height: 70vh;
   text-align: center;
   margin: 100px;
+// background-color: RGB(181, 198, 208, 0.6);
 }
+
+.foot {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 30vh;
+  text-align: center;
+  margin: 100px;
+}
+
+
+
 .scout-title, .scout-img, .inf-img, .inf-title {
   width: 500px;
   margin: 20px;
   padding: 0;
+}
+
+.scout-title p {
+ color: #4d4d4d;
 }
 
 .scout-title {
@@ -29,8 +46,9 @@
   grid-area: 2 / 2 / span 1 / span 1;
 }
 
-a {
+a.home-down-arrow {
  color: white;
+ font-size: 30px;
 
  &:hover {
    text-decoration: none;
@@ -38,10 +56,40 @@ a {
  }
 }
 
+.btn-home-join-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #444;
+}
+
+.site-title {
+  margin-bottom: 80px;
+}
+
+.btn-explore {
+  margin-bottom: 80px;
+}
+
+.btn-explore a {
+  font-size: 26px;
+  border-radius: 15px;
+  // border: 1px dashed rgba(250,250,250, 0.5);
+  padding: 10px 40px;
+  background-color: rgba(0,0,0,0.3);
+  box-shadow: 10px 20px 20px -20px black;
+  &:hover {
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+  }
+}
+
 // BELOW IS LE WAGON, ABOVE IS FOR HOMEPAGE GRID
->>>>>>> 807573bd311e15a59d45990f2e8020f458526bce
 
 .banner-home {
+  opacity: 0.95;
   color: white;
   text-align: center;
   height: calc(100vh - 70px);
@@ -50,7 +98,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity:0.83;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 70px;
@@ -67,7 +114,8 @@ a {
 .banner p {
  font-size: 25px;
  font-weight: lighter;
- color: rgb(255, 255, 255);
+ //color: rgb(255, 255, 255);
+ color: #4d4d4d;
  opacity: 0.6;
  margin-bottom: 30px;
 }// Specific CSS for your home-page
@@ -177,7 +225,17 @@ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 .scout-button {
  position: absolute;
  bottom:220px;
- left: 420px;
+ left: 320px;
+ font-size: 40px;
+ font-weight: bold;
+}
+
+.influencer-button {
+ position: absolute;
+ bottom:220px;
+ left: 280px;
+ font-size: 40px;
+ font-weight: bold;
 }
 
 .banner {
@@ -205,6 +263,20 @@ box-shadow: 10px 10px 22px 0px rgba(0,0,0,0.18);
 text-align: center;
  color: black;
 }
+
+.social {
+  height: 100vh;
+  width: 50px;
+  position: fixed;
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.social ul {
+  list-style: none;
 
 .big-container {
   margin: 100px;
