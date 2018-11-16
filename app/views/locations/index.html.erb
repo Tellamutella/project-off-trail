@@ -1,17 +1,22 @@
-<div class="locations-bg style ">
-  <div class="big-container">
-    <%= form_tag("/search", method: 'get', remote: true ) do %>
-    <%= label_tag(:query, 'Search for:') %>
-    <%= text_field_tag(:query) %>
-    <%= submit_tag("Find") %>
-    <% end %>
-    <div id="results"></div>
-    <div id="search_results_and_index">
-      <div class="map-center">
-        <div id="map" style="width: 100%;
-        height: 400px; margin-top: 50px;" data-markers="<%= @markers.to_json %>"></div>
-      </div>
-      <%= render 'indexcards', locations: @locations %>
-    </div>
+<div class="locations-bg" style="margin-top: 100px;">
+  <%= form_tag("/search", method: 'get', remote: true ) do %>
+  <%= label_tag(:query, 'Search for:') %>
+  <%= text_field_tag(:query)%>
+  <%= submit_tag("Find") %>
+  <% end %>
+  <div id="results"></div>
+  <div class="map-center">
+    <div id="map" style="width: 70%;
+          height: 500px;" data-markers="<%= @markers.to_json %>"></div>
   </div>
+  <div id="search_results_and_index">
+    <%= render 'indexcards', locations: @locations %>
+  </div>
+  <% if policy(Location).create? %>
+  <div class="btn-add">
+    <%= link_to new_location_path do %>
+    +
+    <%end%>
+  </div>
+  <% end %>
 </div>
