@@ -26,14 +26,19 @@
                     </ul>
                 </div>
             </div>
+
             <div class="user-bookings">
                 <!-- ### -->
+
                 <% @current.bookings.each do |booking| %>
 
                         <div class="db-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-                        url('<%= cl_image_path booking.location.photo, width: 400, height: 300 %>');">
+                        url('<%= cl_image_path booking.location.photo, width: 450, height: 300 %>');">
                         <div class="container">
+                          <h3><strong>Confirmed</strong></h3>
+                          <p>Date of departure <%= booking.date %></p>
                             <h2> <%= link_to booking.location.name, location_path(booking.location) %></h2>
+
                             <h3><%= booking.location.user.first_name %></h3>
                             <p>
                                 <%= booking.location.coordinates %>
@@ -41,7 +46,7 @@
                             <p>$
                                 <%= booking.location.price %>
                             </p>
-                            <%= cl_image_tag booking.user.photo, class: 'card-user' %>
+                            <%= cl_image_tag booking.user.photo, class: 'card-user-d' %>
                     </div>
                     </div>
 
@@ -55,7 +60,7 @@
          <h4><%= l.name %></h4>
           <h5><%= l.description %></h5>
           <%= link_to location_path(l) do %>
-          <%= cl_image_tag l.photo, width: 400, height: 300 %>
+          <%= cl_image_tag l.photo, width: 300, height: 200 %>
           <% end %>
         </div>
         <% end %>
