@@ -40,6 +40,23 @@ class LocationsController < ApplicationController
     end
   end
 
+  def search
+    @query = params[:query]
+    @locations = Location.where("address ILIKE ?", "%#{params[:query]}%")
+    @mlocations = @locations.where.not(latitude: nil, longitude: nil)
+    @markers = @mlocations.map do |mlocation|
+      {
+        lng: mlocation.longitude,
+        lat: mlocation.latitude,
+        infoWindow: { content: render_to_string(partial: "/locations/map_window", locals: { location: mlocation })}
+      }
+    end
+    respond_to do |format|
+      format.html { redirect_to locations_path}
+      format.js
+    end
+  end
+
   def show
     @location = Location.find(params[:id])
     @booking = Booking.new
