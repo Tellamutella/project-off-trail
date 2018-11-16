@@ -1,3 +1,5 @@
+<%=render "shared/social"%>
+
 <div class="banner"  style="background-image:
          url('<%= cl_image_path 'Influencer', height: 500, width: 500 %>')">
 
@@ -8,7 +10,7 @@
 The info TLD was a response to ICANN's highly publicized announcement,[1] in late 2000, of a phased release of seven new generic top-level do</p>
 </div>
 </div>
-<div class='scout-button'>
-<%= link_to "Become a Influencer", new_user_registration_path,:class=>"btn btn-primary" %>
+<div class='influencer-button'>
+<%= link_to "Become a Influencer", new_user_registration_path,:class=>"btn-home-join-us" %>
 </div>
 </div>
