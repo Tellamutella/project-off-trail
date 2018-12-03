@@ -2,4 +2,4 @@
 A platform connecting influencers with scouts to find photogenic locations.
 
 # Screenshots
-<img src="app/assets/images/offtrail.gif" width="60%" />
+<img src="app/assets/images/offtrail.gif" width="70%" />
