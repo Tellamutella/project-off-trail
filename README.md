@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Off Trail
+A platform connecting influencers with scouts to find photogenic locations.
+
+# Screenshots
+<img src="app/assets/images/offtrail.gif" width="60%" />
